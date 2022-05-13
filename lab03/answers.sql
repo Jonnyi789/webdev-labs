@@ -43,20 +43,20 @@ ORDER BY count desc;
 
 
 
--- Exercise 8*
+-- Exercise 8
 SELECT p.id, p.image_url, p.user_id, u.username, u.first_name, u.last_name 
-FROM posts p
-INNER JOIN users u
-ON u.id = p.user_id
+FROM posts p 
+INNER JOIN users u 
+ON p.user_id = u.id 
 WHERE p.user_id=26 OR p.user_id=12;
 
 
 
--- Exercise 9*
+-- Exercise 9
 SELECT p.id, p.pub_date, f.following_id 
-FROM posts p
-INNER JOIN following f
-ON p.user_id = f.following_id
+FROM posts p 
+INNER JOIN following f 
+ON p.user_id = f.following_id 
 WHERE f.user_id = 26;
 
 
